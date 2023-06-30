@@ -5,5 +5,7 @@ There are main 2 function which makes the nUSDT coin stable
 2. Redeem-> Here _burn function is used to burn token
 
 Contract Address:- 0x36a7672e2ed2602239Aff69cB56c48e44C8DD27f
+
 Smart contract is deployed sepolia testnet, so connect sepolia network before interecting
+
 Frontend link -->  https://nusdt.vercel.app/
