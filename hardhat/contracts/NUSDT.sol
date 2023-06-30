@@ -14,6 +14,7 @@ contract nUSDT is ERC20,ReentrancyGuard  {
     }
 
     function deposit() payable nonReentrant external {
+        // require(msg.sender!=address(0),"address can not be null") --> is not needed because it's availabe in _mint function
         uint msgValue=msg.value;
         require(msgValue>0,"msg.value can not be zero");
         address msgSender= msg.sender;
@@ -23,6 +24,8 @@ contract nUSDT is ERC20,ReentrancyGuard  {
         _mint(msgSender, amount); 
     }
     function redeem(uint _amount) nonReentrant  external{
+        // require(msg.sender!=address(0),"address can not be null") --> is not needed because it's availabe in _burn function
+        // require(balanceOf(msg.sender)>=_amount) --> is not needed because it's availabe in _burn funtion
         require(_amount>0,"amount should be positive");
         address msgSender= msg.sender;
         int price=getLatestData()*1e10; // multiplication to get upto 18 decimals
