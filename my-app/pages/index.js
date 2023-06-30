@@ -77,6 +77,8 @@ export default function Home() {
       setReload(!reload);
       return;
     } catch (e) {
+      alert("transaction failed");
+      return ;
       console.log(e);
     }
   }
@@ -91,6 +93,8 @@ export default function Home() {
       setReload(!reload);
       return;
     } catch (e) {
+      alert("transaction failed");
+      return ;
       console.log(e);
     }
   }
